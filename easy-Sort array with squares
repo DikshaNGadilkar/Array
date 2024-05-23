@@ -1,0 +1,11 @@
+class Solution {
+    public int[] sortedSquares(int[] nums) {
+        int n=nums.length;
+    int sqrt[]=new int[n];
+    for(int i=0;i<n;i++){
+        sqrt[i]=nums[i]*nums[i];
+    }
+    Arrays.sort(sqrt);
+    return sqrt;
+    }
+}
