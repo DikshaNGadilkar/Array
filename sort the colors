@@ -1,0 +1,31 @@
+Q;Input: nums = [2,0,2,1,1,0]
+Output: [0,0,1,1,2,2]
+
+
+class Solution {
+    public void sortColors(int[] nums) {
+        int mid=0;
+        int low=0,high=nums.length-1;
+        while(mid<=high){
+            switch(nums[mid]){
+                case 0: int temp=nums[low];
+                        nums[low]=nums[mid];
+                        nums[mid]=temp;
+                        mid++;
+                        low++;
+                        break;
+                case 1:
+                        mid++;
+                        break;
+                case 2:temp=nums[mid];
+                        nums[mid]=nums[high];
+                         nums[high]=temp;
+                    high--;
+                    break;
+        
+
+
+            }
+        }
+    }
+}
